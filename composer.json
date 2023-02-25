@@ -1,0 +1,17 @@
+{
+    "name": "jankes/news-system",
+    "description": "Prosty system newsów (zadanie rekrutacyjne)",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jankes",
+            "email": "jankes@jankes.com.pl"
+        }
+    ],
+    "require": {}
+}
