@@ -28,21 +28,21 @@ ON DUPLICATE KEY UPDATE `author_id` = VALUES(`author_id`), `name` = VALUES(`name
 DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news` (
   `news_id` int(11) NOT NULL AUTO_INCREMENT,
-  `nazwa` varchar(100) COLLATE utf8_polish_ci NOT NULL,
+  `title` varchar(100) COLLATE utf8_polish_ci NOT NULL,
   `text` text COLLATE utf8_polish_ci,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `edited_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`news_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
-INSERT INTO `news` (`news_id`, `nazwa`, `text`, `created_at`, `edited_at`) VALUES
+INSERT INTO `news` (`news_id`, `title`, `text`, `created_at`, `edited_at`) VALUES
 (1,	'Pierwszy',	'To jest pierwszy artykuł',	'2023-02-24 16:29:29',	'2023-02-24 16:29:29'),
 (2,	'Drugi',	'To jest drugi artykuł',	'2023-02-24 16:29:38',	'2023-02-24 16:29:38'),
 (3,	'Trzeci',	'To jest trzeci artykuł',	'2023-02-24 16:29:58',	'2023-02-24 16:29:58'),
 (4,	'Czwarty',	'To jest czwarty artykuł',	'2023-02-24 16:30:16',	'2023-02-24 16:31:16'),
 (5,	'Piąty',	'To jest piąty artykuł',	'2023-02-24 16:30:29',	'2023-02-24 16:30:29'),
 (6,	'Szósty',	'To jest szósty artykuł',	'2023-02-24 16:30:45',	'2023-02-24 16:30:45')
-ON DUPLICATE KEY UPDATE `news_id` = VALUES(`news_id`), `nazwa` = VALUES(`nazwa`), `text` = VALUES(`text`), `created_at` = VALUES(`created_at`), `edited_at` = VALUES(`edited_at`);
+ON DUPLICATE KEY UPDATE `news_id` = VALUES(`news_id`), `title` = VALUES(`title`), `text` = VALUES(`text`), `created_at` = VALUES(`created_at`), `edited_at` = VALUES(`edited_at`);
 
 DROP TABLE IF EXISTS `news_author`;
 CREATE TABLE `news_author` (
@@ -66,4 +66,4 @@ INSERT INTO `news_author` (`author_id`, `news_id`) VALUES
 (1,	6)
 ON DUPLICATE KEY UPDATE `author_id` = VALUES(`author_id`), `news_id` = VALUES(`news_id`);
 
--- 2023-02-24 16:35:07
+-- 2023-02-25 14:04:58
