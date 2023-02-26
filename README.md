@@ -7,11 +7,11 @@ recruitment task
 4. Uruchom serwer aplikacji z folderu public.
 
 Co jest: 
-    dodawanie nowego newsa wraz z dodaniem nowego autora
-    edycja istniejącego newsa bez edycji autorów
-    usuwanie newsów
+    dodawanie nowego newsa wraz z dodaniem nowego autora,
+    edycja istniejącego newsa bez edycji autorów,
+    usuwanie newsów,
     lista top3 autorów (nie można manipulować wyświetlaniem)
 
 Brak:
-    jakiegokolwiek stylowania
+    jakiegokolwiek stylowania,
     bardzo wielu innych rzeczy
