@@ -16,6 +16,11 @@ class NewsController extends Controller
         $this->authorModel = new AuthorModel();
     }
 
+    public function home() : void
+    {
+        $this->view(view: 'home', data: '');
+    }
+
     public function index() : void
     {
         $this->view(view: 'news/index', data: $this->newsModel->getAll());

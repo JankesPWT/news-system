@@ -11,6 +11,8 @@ class Controller
 
     public function view($view, $data)
     {
+        require_once '../Views/template/head.php';
         require_once '../Views/' . $view . '.php';
+        require_once '../Views/template/foot.php';
     }
 }

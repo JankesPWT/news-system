@@ -9,10 +9,7 @@ use App\Core\Router;
 
 $router = new Router();
 
-$router->get('/', function () {
-    echo 'Home Page';
-});
-
+$router->get('/', NewsController::class . '::home');
 
 $router->get('/news/create', NewsController::class . '::create');
 $router->post('/news/create', NewsController::class . '::add');
@@ -33,10 +30,3 @@ $router->addNotFoundHandler(function () {
 });
 
 $router->run();
-?>
-
-<br><br>
-<a href="/news">News</a>
-|
-<a href="/top">Top</a>
-
